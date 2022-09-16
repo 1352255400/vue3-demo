@@ -1,0 +1,15 @@
+#### header常用参数：
+Content-Type：参数类型：application/json
+Authorization：token（登录获取）
+Language：语言环境(zh:中文，en：英文)
+DeviceId：设备id（设备唯一标识：app必填）
+Source：登录终端（PC:0,IOS:1,安卓:2：app必填）
+
+##### 请求实例：
+```
+Content-Type：application/json
+Authorization：Bearer 6c82b7dcf39d90b56f0e1491817381a5
+Language：zh
+Source：1
+DeviceId:6c82b7dcf39d90b56f0e1491817381a53242
+```

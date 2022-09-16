@@ -1,0 +1,217 @@
+:root {
+  // 这里可以设置你自定义的颜色变量
+  // 这个是element主要按钮:active的颜色，当主题更改后此变量的值也随之更改
+  --el-color-primary: #02A5B4;
+  --el-color-primary-dark: $activeText;
+  // element plus 2.1.0 禁用文本色值和正常文本色值无法区分问题
+  --el-text-color-disabled: #ccc;
+  --el-button-hover-text-color: red !important;
+  --el-color-primary-light-3: #02A5B4;
+  --el-button-bg-color: #02A5B4;
+  --el-button-hover-bg-color: #02A5B4;
+}
+
+// 覆盖 element-plus 的样式
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type='file'] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block;
+  }
+}
+
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+// 选中行背景色值
+.el-table__body tr.current-row td {
+  background-color: #e1f3d8b5 !important;
+}
+
+// card 的header统一高度
+.el-card__header {
+  height: 60px !important;
+}
+
+// 表格表头和表体未对齐
+.el-table__header col[name='gutter'] {
+  display: table-cell !important;
+}
+
+
+// fix: 内核较旧的浏览器不支持:not(selector list)
+.el-button:not(.is-text),
+.el-button:not(.is-link),
+.el-button:not(.el-button--text) {
+  //   background-color: var(--el-button-bg-color);
+  //   border: var(--el-border);
+  //   border-color: var(--el-button-border-color)
+}
+
+.el-button:not(.is-text):focus,
+.el-button:not(.is-link):focus,
+.el-button:not(.el-button--text):focus,
+.el-button:not(.is-text):hover,
+.el-button:not(.is-link):hover,
+.el-button:not(.el-button--text):hover {
+  //   color: $activeText;
+  //   border-color: var(--el-button-hover-border-color);
+  //   background-color: var(--el-button-hover-bg-color);
+  //   outline: 0
+}
+
+.el-button:not(.is-text):active,
+.el-button:not(.is-link):active,
+.el-button:not(.el-button--text):active {
+  color: var(--el-button-active-text-color);
+  border-color: var(--el-button-active-border-color);
+  background-color: var(--el-button-active-bg-color);
+  outline: 0
+}
+
+.el-button:not(.is-text):focus-visible,
+.el-button:not(.is-link):focus-visible,
+.el-button:not(.el-button--text):focus-visible {
+  border-color: transparent;
+  outline: 2px solid var(--el-button-border-color);
+  outline-offset: 1px
+}
+
+.form-info {
+  .el-input {
+    width: 200px;
+  }
+
+  .el-input input,
+  .el-input input,
+  .el-form--inline .el-input input,
+  .el-input__inner {
+    width: 180px !important;
+  }
+
+  .el-input textarea,
+  .el-input textarea,
+  .el-form--inline .el-input textarea,
+  .el-textarea__inner {
+    width: 300px !important;
+    height: 100px !important;
+  }
+
+  .el-select {
+
+    .el-input input,
+    .el-input input,
+    .el-form--inline .el-input input,
+    .el-input__inner {
+      width: 159px !important;
+    }
+  }
+}
+
+
+
+.div-batch {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.searchText {
+  width: 30px;
+}
+
+.divider .el-divider__text {
+  font-size: 15px !important;
+  font-weight: bold;
+}
+
+// 搜索框展開收起
+.form-list {
+  overflow: hidden;
+
+  form {
+    height: 46px;
+  }
+}
+
+.form-list-full {
+  overflow: hidden;
+
+  form {
+    min-height: 46px;
+    min-width: 600px;
+  }
+}
+
+.search-form {
+  width: calc(100% - 260px) !important;
+  min-width: 600px;
+  float: left;
+  overflow: hidden;
+
+  .el-form-item {
+    margin-bottom: 14px;
+    margin-right: 20px !important;
+  }
+
+  .el-input input,
+  .el-input input,
+  .el-form--inline .el-input input,
+  .el-input__inner {
+    width: 180px !important;
+  }
+
+  .el-select {
+
+    .el-input input,
+    .el-input input,
+    .el-form--inline .el-input input,
+    .el-input__inner {
+      width: 159px !important;
+    }
+  }
+
+  .el-input textarea,
+  .el-input textarea,
+  .el-form--inline .el-input textarea,
+  .el-textarea__inner {
+    width: 300px !important;
+    height: 100px !important;
+  }
+
+  .el-date-editor .el-range-input {
+    width: 150px !important;
+  }
+}
+
+.form-btns {
+  float: right;
+  width: 225px;
+  text-align: right;
+}
+
+.el-date-editor--datetimerange.el-input,
+.el-date-editor--datetimerange.el-input__inner {
+  width: 300px !important;
+}
+
+// 搜索框展開收起 end
+.pagination-container {
+  padding: 0px !important;
+  padding-top: 15px !important;
+}
